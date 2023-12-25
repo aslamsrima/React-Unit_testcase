@@ -1,0 +1,95 @@
+body{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #4f94e1, #7048e8);
+}
+.jackpot-light-controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  gap: 2rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: 20px;
+}
+
+.slots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to bottom, #f2f2f2, #ddd);
+  border-radius: 50%;
+  position: relative;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 2s ease;
+}
+
+.slot {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #4f94e1, #7048e8);
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #fff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: all 700ms;
+}
+
+.slot.active {
+  background: linear-gradient(135deg, #ff5733, #ff5722);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.rotate-button {
+  background: linear-gradient(135deg, #4f94e1, #7048e8);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.rotate-button:hover {
+  background: linear-gradient(135deg, #7048e8, #4f94e1);
+  transform: scale(1.05);
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 420px) {
+  .jackpot-light-controller {
+    padding: 10px 15px;
+    gap: 0.5rem;
+  }
+  
+  .slots-container {
+    width: 155px;
+    height: 155px;
+    /* max-width: 80%; */
+    margin: 10px;
+  }
+  
+  .slot {
+    width: 30px;
+    height: 30px;
+    font-size: 0.8rem;
+  }
+} 
